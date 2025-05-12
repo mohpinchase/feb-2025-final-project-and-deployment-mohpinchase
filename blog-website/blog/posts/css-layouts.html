@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid vs Flexbox: When to Use What - BlogSpace</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">BlogSpace</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../index.html" class="active">Blog</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <main class="post-page">
+        <article class="post">
+            <div class="post-header">
+                <div class="container">
+                    <span class="category">Tutorial</span>
+                    <h1>CSS Grid vs Flexbox: When to Use What</h1>
+                    <div class="post-meta">
+                        <span class="date">May 10, 2025</span>
+                        <span class="author">By Mike Chen</span>
+                        <span class="read-time">8 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <div class="container">
+                    <img src="../../assets/images/placeholder-2.jpg" alt="CSS Grid vs Flexbox" class="featured-image">
+                    
+                    <div class="content-body">
+                        <h2>Understanding Modern CSS Layout Systems</h2>
+                        <p>CSS Grid and Flexbox are two powerful layout systems that have revolutionized how we build web layouts. While they may seem similar at first, each has its own strengths and ideal use cases.</p>
+
+                        <div class="comparison-table">
+                            <h3>Quick Comparison</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Flexbox</th>
+                                        <th>Grid</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dimension</td>
+                                        <td>One-dimensional</td>
+                                        <td>Two-dimensional</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Best for</td>
+                                        <td>Components, small-scale layouts</td>
+                                        <td>Page layouts, complex grid systems</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direction</td>
+                                        <td>Row or column</td>
+                                        <td>Rows and columns simultaneously</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2>When to Use Flexbox</h2>
+                        <p>Flexbox is ideal for:</p>
+                        <ul>
+                            <li>Navigation menus</li>
+                            <li>Card layouts with variable content</li>
+                            <li>Centering elements</li>
+                            <li>Equal-height columns</li>
+                        </ul>
+
+                        <div class="code-example">
+                            <h3>Flexbox Example</h3>
+                            <pre><code class="language-css">
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 200px;
+}
+                            </code></pre>
+                        </div>
+
+                        <div class="demo-section">
+                            <h3>Live Demo: Flexbox Navigation</h3>
+                            <div class="demo-flex-nav">
+                                <div class="demo-item">Home</div>
+                                <div class="demo-item">About</div>
+                                <div class="demo-item">Services</div>
+                                <div class="demo-item">Contact</div>
+                            </div>
+                        </div>
+
+                        <h2>When to Use Grid</h2>
+                        <p>CSS Grid is perfect for:</p>
+                        <ul>
+                            <li>Overall page layouts</li>
+                            <li>Image galleries</li>
+                            <li>Complex grid systems</li>
+                            <li>Two-dimensional layouts</li>
+                        </ul>
+
+                        <div class="code-example">
+                            <h3>Grid Example</h3>
+                            <pre><code class="language-css">
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.grid-item {
+    padding: 1rem;
+    background: var(--secondary-background);
+}
+                            </code></pre>
+                        </div>
+
+                        <div class="demo-section">
+                            <h3>Live Demo: Grid Gallery</h3>
+                            <div class="demo-grid-gallery">
+                                <div class="demo-grid-item">1</div>
+                                <div class="demo-grid-item">2</div>
+                                <div class="demo-grid-item">3</div>
+                                <div class="demo-grid-item">4</div>
+                            </div>
+                        </div>
+
+                        <h2>Best Practices</h2>
+                        <ol>
+                            <li>Use Flexbox for one-dimensional layouts (rows OR columns)</li>
+                            <li>Use Grid for two-dimensional layouts (rows AND columns)</li>
+                            <li>Combine both when appropriate</li>
+                            <li>Consider content flexibility needs</li>
+                        </ol>
+
+                        <div class="pro-tip">
+                            <h3>💡 Pro Tip</h3>
+                            <p>You can use both Flexbox and Grid together! Grid for the overall layout, and Flexbox for components within grid areas.</p>
+                        </div>
+
+                        <div class="conclusion">
+                            <h2>Conclusion</h2>
+                            <p>Both Flexbox and Grid are essential tools in modern web development. Understanding their strengths and use cases will help you create more efficient and maintainable layouts. Remember, it's not about choosing one over the other, but knowing when to use each or combine them.</p>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag">CSS</span>
+                            <span class="tag">Flexbox</span>
+                            <span class="tag">Grid</span>
+                            <span class="tag">Layout</span>
+                            <span class="tag">Web Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="related-posts">
+            <div class="container">
+                <h2>Related Posts</h2>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="../../assets/images/placeholder-1.jpg" alt="Getting Started with Web Development">
+                            <span class="category">Tutorial</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="getting-started.html">Getting Started with Web Development</a></h3>
+                            <p class="post-meta">May 11, 2025 • 10 min read</p>
+                            <p class="post-excerpt">Learn the fundamentals of modern web development...</p>
+                            <a href="getting-started.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="../../assets/images/placeholder-3.jpg" alt="JavaScript Best Practices">
+                            <span class="category">Tips</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="js-best-practices.html">JavaScript Best Practices</a></h3>
+                            <p class="post-meta">May 9, 2025 • 12 min read</p>
+                            <p class="post-excerpt">Write cleaner, more maintainable JavaScript code...</p>
+                            <a href="js-best-practices.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 BlogSpace. All rights reserved.</p>
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+    </footer>
+
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/placeholder.js"></script>
+</body>
+</html>

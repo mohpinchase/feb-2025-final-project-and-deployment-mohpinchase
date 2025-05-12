@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Responsive Web Design - BlogSpace</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">BlogSpace</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../index.html" class="active">Blog</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <main class="post-page">
+        <article class="post">
+            <div class="post-header">
+                <div class="container">
+                    <span class="category">Tutorial</span>
+                    <h1>Mastering Responsive Web Design</h1>
+                    <div class="post-meta">
+                        <span class="date">May 5, 2025</span>
+                        <span class="author">By Sarah Johnson</span>
+                        <span class="read-time">15 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <div class="container">
+                    <img src="../../assets/images/placeholder-7.jpg" alt="Responsive Web Design" class="featured-image">
+                    
+                    <div class="content-body">
+                        <h2>Understanding Responsive Design</h2>
+                        <p>Responsive web design is no longer optional—it's a necessity. With users accessing websites from various devices, your site needs to provide a seamless experience across all screen sizes.</p>
+
+                        <div class="responsive-section">
+                            <h2>1. Mobile-First Approach</h2>
+                            <div class="section-content">
+                                <h3>Key Principles:</h3>
+                                <ul>
+                                    <li>Design for mobile devices first</li>
+                                    <li>Progressive enhancement</li>
+                                    <li>Content prioritization</li>
+                                    <li>Performance optimization</li>
+                                </ul>
+                                <div class="code-example">
+                                    <h4>Mobile-First CSS Example</h4>
+                                    <pre><code class="language-css">
+/* Base styles (mobile) */
+.container {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        padding: 2rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+        padding: 3rem;
+    }
+}
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="responsive-section">
+                            <h2>2. Fluid Grids and Layouts</h2>
+                            <div class="section-content">
+                                <h3>Implementation Techniques:</h3>
+                                <ul>
+                                    <li>CSS Grid for page layouts</li>
+                                    <li>Flexbox for component layouts</li>
+                                    <li>Relative units (%, rem, em)</li>
+                                    <li>Auto-fit and auto-fill</li>
+                                </ul>
+                                <div class="code-example">
+                                    <h4>Fluid Grid Example</h4>
+                                    <pre><code class="language-css">
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    );
+    gap: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.flex-item {
+    flex: 1 1 300px;
+}
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="responsive-section">
+                            <h2>3. Responsive Images</h2>
+                            <div class="section-content">
+                                <h3>Image Optimization:</h3>
+                                <ul>
+                                    <li>srcset and sizes attributes</li>
+                                    <li>Picture element</li>
+                                    <li>Art direction</li>
+                                    <li>Lazy loading</li>
+                                </ul>
+                                <div class="code-example">
+                                    <h4>Responsive Image Example</h4>
+                                    <pre><code class="language-html">
+<picture>
+    <!-- Art direction -->
+    <source
+        media="(min-width: 1024px)"
+        srcset="large.jpg 1024w,
+                large@2x.jpg 2048w"
+        sizes="80vw"
+    >
+    <source
+        media="(min-width: 768px)"
+        srcset="medium.jpg 768w,
+                medium@2x.jpg 1536w"
+        sizes="90vw"
+    >
+    <!-- Default mobile image -->
+    <img
+        src="small.jpg"
+        srcset="small.jpg 320w,
+                small@2x.jpg 640w"
+        sizes="95vw"
+        alt="Responsive image"
+        loading="lazy"
+    >
+</picture>
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="responsive-section">
+                            <h2>4. Typography and Spacing</h2>
+                            <div class="section-content">
+                                <h3>Best Practices:</h3>
+                                <ul>
+                                    <li>Fluid typography</li>
+                                    <li>Modular scale</li>
+                                    <li>Responsive spacing</li>
+                                    <li>Line length control</li>
+                                </ul>
+                                <div class="code-example">
+                                    <h4>Fluid Typography Example</h4>
+                                    <pre><code class="language-css">
+:root {
+    --fluid-min-width: 320;
+    --fluid-max-width: 1200;
+    --fluid-min-size: 16;
+    --fluid-max-size: 24;
+    --fluid-min-ratio: 1.2;
+    --fluid-max-ratio: 1.333;
+}
+
+body {
+    font-size: clamp(
+        var(--fluid-min-size)px,
+        calc(1rem + ((1vw - var(--fluid-min-width)px) * var(--fluid-factor))),
+        var(--fluid-max-size)px
+    );
+}
+
+.container {
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: clamp(1rem, 5vw, 3rem);
+}
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="responsive-section">
+                            <h2>5. Testing and Debugging</h2>
+                            <div class="section-content">
+                                <h3>Testing Methods:</h3>
+                                <ul>
+                                    <li>Browser DevTools</li>
+                                    <li>Device testing</li>
+                                    <li>Accessibility testing</li>
+                                    <li>Performance monitoring</li>
+                                </ul>
+                                <div class="implementation-note">
+                                    <h4>💡 Testing Tip</h4>
+                                    <p>Test your responsive design on real devices whenever possible, as emulators may not perfectly replicate actual device behavior.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="best-practices">
+                            <h2>Best Practices Checklist</h2>
+                            <ul>
+                                <li>✓ Use relative units</li>
+                                <li>✓ Implement breakpoints based on content</li>
+                                <li>✓ Test on multiple devices</li>
+                                <li>✓ Optimize performance</li>
+                                <li>✓ Ensure accessibility</li>
+                                <li>✓ Consider touch interactions</li>
+                            </ul>
+                        </div>
+
+                        <div class="conclusion">
+                            <h2>Moving Forward</h2>
+                            <p>Mastering responsive web design is an ongoing journey. Stay updated with new techniques and tools, and always prioritize user experience across all devices.</p>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag">Responsive Design</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Mobile-First</span>
+                            <span class="tag">Web Development</span>
+                            <span class="tag">UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="related-posts">
+            <div class="container">
+                <h2>Related Posts</h2>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="../../assets/images/placeholder-2.jpg" alt="CSS Layouts">
+                            <span class="category">Tutorial</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="css-layouts.html">CSS Grid vs Flexbox: When to Use What</a></h3>
+                            <p class="post-meta">May 10, 2025 • 8 min read</p>
+                            <p class="post-excerpt">Understanding modern CSS layout techniques...</p>
+                            <a href="css-layouts.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="../../assets/images/placeholder-5.jpg" alt="Performance Tips">
+                            <span class="category">Tips</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="performance-tips.html">5 Ways to Improve Your Website Performance</a></h3>
+                            <p class="post-meta">May 7, 2025 • 9 min read</p>
+                            <p class="post-excerpt">Optimize your website for better performance...</p>
+                            <a href="performance-tips.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 BlogSpace. All rights reserved.</p>
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+    </footer>
+
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/placeholder.js"></script>
+    <script src="../../js/preview-modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Web Development - BlogSpace</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">BlogSpace</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../index.html" class="active">Blog</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <main class="post-page">
+        <article class="post">
+            <div class="post-header">
+                <div class="container">
+                    <span class="category">Tutorial</span>
+                    <h1>Getting Started with Web Development</h1>
+                    <div class="post-meta">
+                        <span class="date">May 11, 2025</span>
+                        <span class="author">By Sarah Johnson</span>
+                        <span class="read-time">10 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <div class="container">
+                    <img src="../../assets/images/placeholder-1.jpg" alt="Web Development" class="featured-image">
+                    
+                    <div class="content-body">
+                        <h2>Introduction to Web Development</h2>
+                        <p>Web development is an exciting field that combines creativity with technical skills. Whether you're looking to build a personal website or pursue a career in tech, understanding the fundamentals is crucial.</p>
+
+                        <h2>The Three Core Technologies</h2>
+                        
+                        <h3>HTML - The Structure</h3>
+                        <p>HTML (HyperText Markup Language) is the backbone of every webpage. It provides the structure and content:</p>
+                        <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First Webpage&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+
+                        <h3>CSS - The Style</h3>
+                        <p>CSS (Cascading Style Sheets) handles the presentation and styling of web pages:</p>
+                        <pre><code class="language-css">
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1 {
+    color: #2a9d8f;
+    text-align: center;
+}
+                        </code></pre>
+
+                        <h3>JavaScript - The Behavior</h3>
+                        <p>JavaScript adds interactivity and dynamic behavior to websites:</p>
+                        <pre><code class="language-javascript">
+document.querySelector('h1').addEventListener('click', () => {
+    alert('Welcome to Web Development!');
+});
+                        </code></pre>
+
+                        <h2>Essential Tools for Web Development</h2>
+                        <ul>
+                            <li><strong>Text Editor:</strong> VS Code, Sublime Text, or Atom</li>
+                            <li><strong>Browser:</strong> Chrome with DevTools</li>
+                            <li><strong>Version Control:</strong> Git and GitHub</li>
+                            <li><strong>Terminal:</strong> Command line basics</li>
+                        </ul>
+
+                        <h2>Next Steps</h2>
+                        <p>Now that you understand the basics, here are some recommended next steps:</p>
+                        <ol>
+                            <li>Build a simple personal website</li>
+                            <li>Learn responsive design principles</li>
+                            <li>Explore CSS frameworks like Bootstrap</li>
+                            <li>Study JavaScript fundamentals in depth</li>
+                        </ol>
+
+                        <div class="conclusion">
+                            <h2>Conclusion</h2>
+                            <p>Web development is a journey of continuous learning. Start with these fundamentals, practice regularly, and don't be afraid to experiment with new technologies as you progress.</p>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Web Development</span>
+                            <span class="tag">Beginners</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="related-posts">
+            <div class="container">
+                <h2>Related Posts</h2>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="../../assets/images/placeholder-2.jpg" alt="CSS Grid vs Flexbox">
+                            <span class="category">Tutorial</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="css-layouts.html">CSS Grid vs Flexbox: When to Use What</a></h3>
+                            <p class="post-meta">May 10, 2025 • 8 min read</p>
+                            <p class="post-excerpt">Understanding the key differences between CSS Grid and Flexbox...</p>
+                            <a href="css-layouts.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="../../assets/images/placeholder-3.jpg" alt="JavaScript Best Practices">
+                            <span class="category">Tips</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="js-best-practices.html">JavaScript Best Practices</a></h3>
+                            <p class="post-meta">May 9, 2025 • 12 min read</p>
+                            <p class="post-excerpt">Write cleaner, more maintainable JavaScript code...</p>
+                            <a href="js-best-practices.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 BlogSpace. All rights reserved.</p>
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+    </footer>
+
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/placeholder.js"></script>
+</body>
+</html>

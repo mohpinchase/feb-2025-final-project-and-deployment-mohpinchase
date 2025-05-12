@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Git Commands Every Developer Should Know - BlogSpace</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">BlogSpace</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../index.html" class="active">Blog</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <main class="post-page">
+        <article class="post">
+            <div class="post-header">
+                <div class="container">
+                    <span class="category">Tutorial</span>
+                    <h1>Essential Git Commands Every Developer Should Know</h1>
+                    <div class="post-meta">
+                        <span class="date">May 4, 2025</span>
+                        <span class="author">By Michael Chen</span>
+                        <span class="read-time">13 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <div class="container">
+                    <img src="../../assets/images/placeholder-8.jpg" alt="Git Commands" class="featured-image">
+                    
+                    <div class="content-body">
+                        <h2>Why Git Matters</h2>
+                        <p>Git is the most widely used version control system in software development. Understanding its core commands is essential for every developer. Let's explore the most important Git commands you'll use daily.</p>
+
+                        <div class="command-section">
+                            <h2>1. Repository Setup and Configuration</h2>
+                            <div class="section-content">
+                                <div class="command-card">
+                                    <h3>Initialize a Repository</h3>
+                                    <pre><code class="language-bash">
+# Create a new repository
+git init
+
+# Clone an existing repository
+git clone https://github.com/username/repository.git
+
+# Configure user information
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="command-section">
+                            <h2>2. Basic Commands</h2>
+                            <div class="section-content">
+                                <div class="command-card">
+                                    <h3>Track and Commit Changes</h3>
+                                    <pre><code class="language-bash">
+# Check status of working directory
+git status
+
+# Add files to staging area
+git add filename.txt    # Add specific file
+git add .              # Add all files
+
+# Commit changes
+git commit -m "Your commit message"
+
+# Push changes to remote
+git push origin main
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="command-section">
+                            <h2>3. Branching and Merging</h2>
+                            <div class="section-content">
+                                <div class="command-card">
+                                    <h3>Working with Branches</h3>
+                                    <pre><code class="language-bash">
+# Create and switch to new branch
+git checkout -b feature-branch
+
+# List all branches
+git branch
+
+# Switch branches
+git checkout main
+
+# Merge branch into current branch
+git merge feature-branch
+
+# Delete branch
+git branch -d feature-branch
+                                    </code></pre>
+                                </div>
+                                <div class="tip-box">
+                                    <h4>💡 Pro Tip</h4>
+                                    <p>Always create a new branch for each feature or bug fix to keep your main branch clean and stable.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="command-section">
+                            <h2>4. Inspecting Changes</h2>
+                            <div class="section-content">
+                                <div class="command-card">
+                                    <h3>View History and Changes</h3>
+                                    <pre><code class="language-bash">
+# View commit history
+git log
+git log --oneline    # Compact view
+
+# View changes in working directory
+git diff
+
+# View changes in staged files
+git diff --staged
+
+# View changes in specific commit
+git show commit-hash
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="command-section">
+                            <h2>5. Undoing Changes</h2>
+                            <div class="section-content">
+                                <div class="command-card">
+                                    <h3>Fix Mistakes</h3>
+                                    <pre><code class="language-bash">
+# Discard changes in working directory
+git checkout -- filename.txt
+
+# Unstage files
+git reset HEAD filename.txt
+
+# Modify last commit
+git commit --amend
+
+# Revert a commit
+git revert commit-hash
+
+# Reset to specific commit
+git reset --hard commit-hash
+                                    </code></pre>
+                                </div>
+                                <div class="warning-box">
+                                    <h4>⚠️ Warning</h4>
+                                    <p>Be careful with reset --hard as it permanently discards changes. Make sure to commit or stash important changes first.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="command-section">
+                            <h2>6. Remote Repository Operations</h2>
+                            <div class="section-content">
+                                <div class="command-card">
+                                    <h3>Working with Remotes</h3>
+                                    <pre><code class="language-bash">
+# Add remote repository
+git remote add origin https://github.com/username/repo.git
+
+# View remote repositories
+git remote -v
+
+# Fetch changes from remote
+git fetch origin
+
+# Pull changes from remote
+git pull origin main
+
+# Push changes to remote
+git push -u origin feature-branch
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="command-section">
+                            <h2>7. Advanced Operations</h2>
+                            <div class="section-content">
+                                <div class="command-card">
+                                    <h3>Stashing and Rebasing</h3>
+                                    <pre><code class="language-bash">
+# Stash changes
+git stash
+git stash list
+git stash pop
+
+# Interactive rebase
+git rebase -i HEAD~3
+
+# Cherry-pick commits
+git cherry-pick commit-hash
+                                    </code></pre>
+                                </div>
+                                <div class="tip-box">
+                                    <h4>💡 Advanced Tip</h4>
+                                    <p>Use interactive rebase to clean up your commit history before pushing to a shared repository.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="workflow-section">
+                            <h2>Common Workflows</h2>
+                            <div class="workflow-card">
+                                <h3>Feature Branch Workflow</h3>
+                                <pre><code class="language-bash">
+# Start new feature
+git checkout -b feature-x
+# Make changes and commit
+git add .
+git commit -m "Add feature x"
+# Push to remote
+git push origin feature-x
+# Create pull request
+# After review and approval
+git checkout main
+git pull origin main
+git merge feature-x
+git push origin main
+                                    </code></pre>
+                            </div>
+                        </div>
+
+                        <div class="conclusion">
+                            <h2>Best Practices</h2>
+                            <ul>
+                                <li>Write clear, descriptive commit messages</li>
+                                <li>Commit early and often</li>
+                                <li>Use branches for new features</li>
+                                <li>Keep your main branch stable</li>
+                                <li>Review changes before committing</li>
+                                <li>Pull before pushing</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag">Git</span>
+                            <span class="tag">Version Control</span>
+                            <span class="tag">Development</span>
+                            <span class="tag">Tutorial</span>
+                            <span class="tag">Commands</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="related-posts">
+            <div class="container">
+                <h2>Related Posts</h2>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="../../assets/images/placeholder-3.jpg" alt="JavaScript Best Practices">
+                            <span class="category">Tips</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="js-best-practices.html">10 JavaScript Best Practices Every Developer Should Know</a></h3>
+                            <p class="post-meta">May 9, 2025 • 12 min read</p>
+                            <p class="post-excerpt">Write better, more maintainable JavaScript code...</p>
+                            <a href="js-best-practices.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="../../assets/images/placeholder-1.jpg" alt="Getting Started with Web Development">
+                            <span class="category">Tutorial</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="getting-started.html">Getting Started with Web Development</a></h3>
+                            <p class="post-meta">May 11, 2025 • 10 min read</p>
+                            <p class="post-excerpt">Learn the fundamentals of modern web development...</p>
+                            <a href="getting-started.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 BlogSpace. All rights reserved.</p>
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+    </footer>
+
+    <script src="../../js/navigation.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../js/placeholder.js"></script>
+    <script src="../../js/preview-modal.js"></script>
+</body>
+</html>

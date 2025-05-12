@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - BlogSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">BlogSpace</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="contact-header">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p class="subtitle">Have a question or suggestion? We'd love to hear from you!</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <div class="info-items">
+                            <div class="info-item">
+                                <span class="icon">📍</span>
+                                <div>
+                                    <h3>Location</h3>
+                                    <p>123 Web Dev Street<br>San Francisco, CA 94105</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">📧</span>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>hello@blogspace.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">📱</span>
+                                <div>
+                                    <h3>Social Media</h3>
+                                    <div class="social-links">
+                                        <a href="#" target="_blank">Twitter</a>
+                                        <a href="#" target="_blank">LinkedIn</a>
+                                        <a href="#" target="_blank">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h2>Send us a Message</h2>
+                        <form id="contactForm" class="form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 BlogSpace. All rights reserved.</p>
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

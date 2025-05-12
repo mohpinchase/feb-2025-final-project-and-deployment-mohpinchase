@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - BlogSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">BlogSpace</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+    </header>
+
+    <main class="search-page">
+        <div class="container">
+            <section class="search-section">
+                <form class="search-form" id="searchForm">
+                    <div class="search-input-wrapper">
+                        <input type="search" id="searchInput" placeholder="Search articles..." value="">
+                        <button type="submit" aria-label="Search">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <select id="categoryFilter">
+                            <option value="">All Categories</option>
+                            <option value="tutorial">Tutorials</option>
+                            <option value="tips">Tips & Tricks</option>
+                            <option value="guide">Guides</option>
+                        </select>
+                        <select id="dateFilter">
+                            <option value="">Any Time</option>
+                            <option value="day">Last 24 Hours</option>
+                            <option value="week">Last Week</option>
+                            <option value="month">Last Month</option>
+                            <option value="year">Last Year</option>
+                        </select>
+                    </div>
+                </form>
+            </section>
+
+            <section class="search-results">
+                <div class="results-header">
+                    <h2>Search Results</h2>
+                    <p class="results-count">Showing <span id="resultCount">3</span> results</p>
+                </div>
+
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="assets/images/placeholder-1.jpg" alt="Getting Started with Web Development">
+                            <span class="category">Tutorial</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="blog/posts/getting-started.html">Getting Started with Web Development</a></h3>
+                            <p class="post-meta">May 11, 2025 • 10 min read</p>
+                            <p class="post-excerpt">Learn the fundamentals of modern web development in this comprehensive guide for beginners...</p>
+                            <a href="blog/posts/getting-started.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="assets/images/placeholder-2.jpg" alt="CSS Grid vs Flexbox">
+                            <span class="category">Tutorial</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="blog/posts/css-layouts.html">CSS Grid vs Flexbox: When to Use What</a></h3>
+                            <p class="post-meta">May 10, 2025 • 8 min read</p>
+                            <p class="post-excerpt">Understanding the key differences between CSS Grid and Flexbox...</p>
+                            <a href="blog/posts/css-layouts.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="assets/images/placeholder-3.jpg" alt="JavaScript Best Practices">
+                            <span class="category">Tips</span>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="blog/posts/js-best-practices.html">10 JavaScript Best Practices Every Developer Should Know</a></h3>
+                            <p class="post-meta">May 9, 2025 • 12 min read</p>
+                            <p class="post-excerpt">Write cleaner, more maintainable JavaScript code...</p>
+                            <a href="blog/posts/js-best-practices.html" class="read-more">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn" disabled>Previous</button>
+                    <div class="pagination-numbers">
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                    </div>
+                    <button class="pagination-btn">Next</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 BlogSpace. All rights reserved.</p>
+        <button class="back-to-top" aria-label="Back to top">↑</button>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/placeholder.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/preview-modal.js"></script>
+</body>
+</html>
