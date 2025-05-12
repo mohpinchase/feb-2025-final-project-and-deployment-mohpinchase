@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results - BlogSpace</title>
-    <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon">
+    <title>Blog Website - Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -16,7 +15,7 @@
                 <span class="hamburger"></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog/index.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -25,43 +24,44 @@
         </nav>
     </header>
 
-    <main class="search-page">
-        <div class="container">
-            <section class="search-section">
-                <form class="search-form" id="searchForm">
-                    <div class="search-input-wrapper">
-                        <input type="search" id="searchInput" placeholder="Search articles..." value="">
-                        <button type="submit" aria-label="Search">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </button>
+    <main>
+        <section class="hero">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active">
+                        <img src="assets/images/placeholder-1.jpg" alt="Featured Post 1">
+                        <div class="slide-content">
+                            <h2>Getting Started with Web Development</h2>
+                            <p>Learn the fundamentals of modern web development...</p>
+                            <a href="blog/posts/getting-started.html" class="btn">Read More</a>
+                        </div>
                     </div>
-                    <div class="search-filters">
-                        <select id="categoryFilter">
-                            <option value="">All Categories</option>
-                            <option value="tutorial">Tutorials</option>
-                            <option value="tips">Tips & Tricks</option>
-                            <option value="guide">Guides</option>
-                        </select>
-                        <select id="dateFilter">
-                            <option value="">Any Time</option>
-                            <option value="day">Last 24 Hours</option>
-                            <option value="week">Last Week</option>
-                            <option value="month">Last Month</option>
-                            <option value="year">Last Year</option>
-                        </select>
+                    <div class="slide">
+                        <img src="assets/images/placeholder-2.jpg" alt="Featured Post 2">
+                        <div class="slide-content">
+                            <h2>CSS Grid vs Flexbox</h2>
+                            <p>Understanding modern CSS layout systems...</p>
+                            <a href="blog/posts/css-layouts.html" class="btn">Read More</a>
+                        </div>
                     </div>
-                </form>
-            </section>
-
-            <section class="search-results">
-                <div class="results-header">
-                    <h2>Search Results</h2>
-                    <p class="results-count">Showing <span id="resultCount">3</span> results</p>
+                    <div class="slide">
+                        <img src="assets/images/placeholder-3.jpg" alt="Featured Post 3">
+                        <div class="slide-content">
+                            <h2>JavaScript Best Practices</h2>
+                            <p>Write cleaner, more maintainable JavaScript...</p>
+                            <a href="blog/posts/js-best-practices.html" class="btn">Read More</a>
+                        </div>
+                    </div>
                 </div>
+                <button class="slider-btn prev" aria-label="Previous slide">❮</button>
+                <button class="slider-btn next" aria-label="Next slide">❯</button>
+                <div class="slider-dots"></div>
+            </div>
+        </section>
 
+        <section class="recent-posts">
+            <div class="container">
+                <h2>Recent Posts</h2>
                 <div class="posts-grid">
                     <article class="post-card">
                         <div class="post-image">
@@ -84,7 +84,7 @@
                         <div class="post-content">
                             <h3><a href="blog/posts/css-layouts.html">CSS Grid vs Flexbox: When to Use What</a></h3>
                             <p class="post-meta">May 10, 2025 • 8 min read</p>
-                            <p class="post-excerpt">Understanding the key differences between CSS Grid and Flexbox...</p>
+                            <p class="post-excerpt">Understanding the key differences between CSS Grid and Flexbox, and when to use each...</p>
                             <a href="blog/posts/css-layouts.html" class="read-more">Read More →</a>
                         </div>
                     </article>
@@ -95,37 +95,29 @@
                             <span class="category">Tips</span>
                         </div>
                         <div class="post-content">
-                            <h3><a href="blog/posts/js-best-practices.html">10 JavaScript Best Practices Every Developer Should Know</a></h3>
+                            <h3><a href="blog/posts/js-best-practices.html">JavaScript Best Practices</a></h3>
                             <p class="post-meta">May 9, 2025 • 12 min read</p>
-                            <p class="post-excerpt">Write cleaner, more maintainable JavaScript code...</p>
+                            <p class="post-excerpt">Essential JavaScript practices that will help you write cleaner, more maintainable code...</p>
                             <a href="blog/posts/js-best-practices.html" class="read-more">Read More →</a>
                         </div>
                     </article>
                 </div>
-
-                <div class="pagination">
-                    <button class="pagination-btn" disabled>Previous</button>
-                    <div class="pagination-numbers">
-                        <button class="active">1</button>
-                        <button>2</button>
-                        <button>3</button>
-                    </div>
-                    <button class="pagination-btn">Next</button>
+                <div class="view-all">
+                    <a href="blog/index.html" class="btn">View All Posts</a>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2025 BlogSpace. All rights reserved.</p>
-           <p>Developed by  <a href="https://mohpinchase.github.io/Final_portifolio/">KAGIRI PETERSON</a></p>
         <button class="back-to-top" aria-label="Back to top">↑</button>
     </footer>
 
     <script src="js/navigation.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/placeholder.js"></script>
-    <script src="js/search.js"></script>
     <script src="js/preview-modal.js"></script>
 </body>
 </html>
